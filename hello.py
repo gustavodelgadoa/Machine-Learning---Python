@@ -24,5 +24,10 @@ elif exampleChoice == 4:
     print("Example 4 is now running...")
     userInput3 = input("What is your name? ")
     print(f"Hello {userInput3}!")
+elif exampleChoice == 5: 
+    ## Displays the formatting ability on a print function AND string manipulations.
+    print("Example 5 is now running...")
+    userInput4 = input("What is your name? ").strip().title()
+    print(f"Hello {userInput4}!")    
 else: 
     print("No example was chosen, goodbye.")
