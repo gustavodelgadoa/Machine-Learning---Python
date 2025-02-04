@@ -1,3 +1,6 @@
+from matplotlib import pyplot as plt
+
+
 ## This is the first file in the PythonDSA repo.
 
 exampleChoice = int(input("Which example would you like to run? "))
@@ -83,6 +86,94 @@ elif exampleChoice == 14:
         print(f"You can expect your investments to be worth {gain(userInput6)} due to the current 8% returns.")
     def gain(x): 
         return ((x * .08) + x)
+    main()
+elif exampleChoice == 15:
+    ## Data scientists in the company 
+    users = [
+        {"id": 0, "name": "Larry"}, 
+        {"id": 1, "name": "Della"}, 
+        {"id": 2, "name": "Gustavo"}, 
+        {"id": 3, "name": "Stephanie"}, 
+        {"id": 4, "name": "Chris"}, 
+        {"id": 5, "name": "Dawne"}, 
+        {"id": 6, "name": "Olivia"}, 
+        {"id": 7, "name": "Isabel"}, 
+        {"id": 8, "name": "Maria"}, 
+        {"id": 9, "name": "Zayra"}]
+
+    ## Set of friendhips across the company of Data scientists
+    friendships = [(0, 1), (0, 2), (1, 2), (1, 3), (2, 3), (3, 4),
+                   (4, 5), (5, 6), (5, 7), (6, 8), (7, 8), (8, 9)]
+    
+    ## test data
+    years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
+    gdp = [300.2, 543.3, 1075.9, 2862.5, 5979.6, 10289.7, 14958.3]
+    plt.plot(years, gdp, color="green", marker='o', linestyle='solid')
+    plt.title("Test graph")
+    plt.ylabel("Billions of $")
+    plt.show()
+elif exampleChoice == 16: 
+    ## Displays OR logical operator + does not equal (negation).
+    def main(): 
+        userInput6 = int(input("What is the X value? "))
+        userInput7 = int(input("What is the Y value? "))
+        ## OR
+        if userInput6 > userInput7 or userInput7 > userInput6: 
+            print("One is larger than the other")
+        else:
+            print("They are equal") 
+        ## Does not equal (Simplified and efficient logic)
+        if userInput6 != userInput7: 
+            print("Values are not equal")
+        else: 
+            print("Values are equal")
+    main()
+elif exampleChoice == 17: 
+    ## Displays AND logical operator for grade calculator
+    # + further enhanced version for code efficiency.
+    def main(): 
+        score = int(input("Provide your score: "))
+        machine = input("Choose which version to run: V1 or V2 ")
+        
+        if machine == "V1":
+            if score >= 90 and score <= 100: 
+                print("You recieved a letter grade: A")
+            elif score >= 80 and score < 90: 
+                print("You recieved a letter grade: B")
+            elif score >= 70 and score < 80: 
+                print("You recieved a letter grade: C")
+            elif score >= 60 and score < 70: 
+                print("You recieved a letter grade: D")
+            elif score >= 0 and score < 60: 
+                print("You recieved a letter grade: F")
+            else: 
+                print("The score provided is not in range. Try Again")
+        elif machine == "V2": 
+            print("Enhanced Grade calculator is now running...")
+            if score >= 90: 
+                print("You recieved a letter grade: A")
+            elif score >= 80: 
+                print("You recieved a letter grade: B")
+            elif score >= 70: 
+                print("You recieved a letter grade: C")
+            elif score >= 60: 
+                print("You recieved a letter grade: D")
+            elif score >= 0: 
+                print("You recieved a letter grade: F")
+            else: 
+                print("The score provided is not in range. Try Again")        
+    main()
+elif exampleChoice == 18:
+    ## Displays proper function placement + custom parity testing function. 
+    def main(): 
+        userInput6 = int(input("Enter a number to test its parity: "))
+        parityTest(userInput6)
+    ## Custom parity function
+    def parityTest(n):
+        if n % 2 == 0:
+            print("Number is even")
+        else: 
+            print("Number is odd") 
     main()
 else: 
     print("No example was chosen, goodbye.")
