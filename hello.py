@@ -175,5 +175,33 @@ elif exampleChoice == 18:
         else: 
             print("Number is odd") 
     main()
+elif exampleChoice == 19:
+    ## Displays pythonic implementation of parity function. 
+    def main(): 
+        userInput6 = int(input("Enter a number to test its parity: "))
+        if parityTest(userInput6):
+            print("Even")
+        else: 
+            print("Odd") 
+    
+    ## Custom pythonic parity function
+    def parityTest(n):
+        return n % 2 == 0 
+    main()
+elif exampleChoice == 20: 
+    ## Displays further conditional logic using Match statements.
+    petName = input("Enter your pets name: ")
+    
+    #if petName == "Winny": 
+    #    print("Winny is a great pet name!")
+    #else: 
+    #    print(f"{petName} is a great pet name too!")
+    
+    ## Same application with Match statement
+    match petName: 
+        case "Winny": 
+            print("Winny is a great pet name!")
+        case _:
+            print(f"{petName} is a great pet name too!")
 else: 
     print("No example was chosen, goodbye.")
